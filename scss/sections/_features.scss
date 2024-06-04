@@ -1,0 +1,61 @@
+.features {
+    text-align: center;
+    font-size: 1rem;
+    padding: 2em 0;
+
+    &__container {
+        display: block;
+        text-align: center;
+        margin-bottom: 2em;
+
+        h3 {
+            padding-top: 1em;
+            color: black;
+        }
+
+        p {
+            padding-top: 0.5em;
+            color: grey;
+            font-family: 'Open Sans';
+            text-align: center;
+            width: 100%;
+            padding-left: 1em;
+        }
+
+        &__heading {
+            color: black;
+            font-weight: 200;
+            font-size: 2em;
+            padding-bottom: 1em;
+            width: 100%;
+        }
+
+        &__red, &__blue, &__green {
+            position: relative;
+            width: 3em;
+            height: 3em;
+            margin: 0 auto;
+        }
+
+        &__person, &__files {
+            position: absolute;
+            top: 0.2em;
+            left: 2em;
+            
+        }
+
+        &__eye{
+            position: absolute;
+            top: 0.8em;
+            left: 2em;
+        }
+    }
+
+    
+    &__icon-wrapper {
+        position: relative;
+        width: 3em;
+        height: 3em;
+        margin: 0 auto 1em;
+    }
+}

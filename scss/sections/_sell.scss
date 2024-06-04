@@ -1,0 +1,48 @@
+.sell{
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    
+    
+    &__container{
+        padding: 2em;
+
+        &__heading{
+            font-size: 3em;
+            color:black;
+            font-weight: 200;
+            padding-bottom: 0.8em;
+        }
+    
+        p{
+            font-weight: 400;
+            padding-bottom: 1.2em;
+        }
+    
+        button{
+            margin-bottom: 1.5em;
+            border-radius: 3.5em;
+            border: none;
+            width: 70%;
+            max-width: 25em;
+            background-color: $primary-color;
+            color: white;
+            padding: 2em;
+            font-weight: 600;
+            box-shadow: 5px 10px 14px 0px rgba(10,126,250,0.3);
+        }
+    }
+    
+    &__bg {
+        width: 100%;
+        display: block;
+        
+        &__small{
+            width: 100%;
+        }
+
+        &__big{
+            display: none;
+        }
+    }
+}

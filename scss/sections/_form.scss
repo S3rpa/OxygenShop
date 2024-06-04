@@ -1,0 +1,125 @@
+.contact {
+    font-size: 1rem;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: 5em;
+
+    &__container {
+
+        h2 {
+            color: black;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1em;
+        }
+
+        &__info {
+            color: #A5A5A5;
+            margin-bottom: 2em;
+            max-width: 30em;
+            margin: 0 auto;
+            margin-top: 2em;
+
+            .contact__email, .contact__phone {
+                margin-bottom: 1em;
+                text-align: left;
+
+                img {
+                    margin-right: 0.5em;
+                    vertical-align: middle;
+                }
+
+                span {
+                    line-height: 2;
+                    font-size: 1rem;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    &__form {
+        max-width: 30em;
+        margin: 0 auto;
+        text-align: left;
+        margin-top: 3em;
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            margin-bottom: 2em;
+            border: none;
+            border-bottom: 1px solid #95989a;
+            padding-bottom: 3em;
+            font-size: 0.7rem;
+        }
+
+        input::placeholder {
+            font-family: 'Open Sans';
+            color: #08A6E4;
+            letter-spacing: 0.2em;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+        }
+
+        .checkbox-container {
+            margin-top: 2em;
+            margin-bottom: 1em;   
+            line-height: 1.5;
+        }
+
+        &__check {
+            border-radius: 0.25em;
+            width: 1.6em;
+            height: 1.6em;
+            appearance: none;
+            border: 0.1em solid #707070;
+            vertical-align: middle;
+            margin-right: 0.5em;
+            position: relative;
+            top: 0.2em;
+
+            &:checked {
+                background-image: url("../../images/checked.png");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        .consent {
+            color: #707070;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+            width: 90%; 
+            margin-left: 2em; 
+            text-align: justify;
+            transform: translateY(-1.8em);
+        }
+
+        button {
+            background-color: #08A6E4;
+            color: white;
+            padding: 1em 6em;
+            border: none;
+            border-radius: 2em;
+            font-family: 'Open Sans';
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 1em auto 0 auto;
+            display: block;
+            position: relative;
+            left:10%;
+        }
+
+        button:hover {
+            box-shadow: 0px 4px 4px 0px rgba(7, 172, 230, 1);
+        }
+    }
+}

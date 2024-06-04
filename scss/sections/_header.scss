@@ -1,0 +1,51 @@
+.header {
+    display: inline-block;
+    background-color: $secondary-color;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    margin-bottom: 6em;
+    box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
+    font-size: 1rem;
+    padding: 1em 1em;
+
+    &__logo {
+        font-size: 2em;
+        color: $primary-color;
+        display: inline-block;
+        font-weight: 100;
+
+    }
+
+    &__menu {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: $primary-color;
+        position: absolute;
+        right: 2em;
+        top: 0.8em;
+ 
+    }
+     &__list
+     {
+        display: none;
+        overflow: hidden;
+        list-style-type: none;
+        font-family: 'Open Sans', sans-serif;
+        width: 100%;
+     }
+
+     
+
+    @media only screen and (min-width: 1000px) {
+        
+
+        &__menu {
+            display: none;
+        }
+
+        
+    }
+}

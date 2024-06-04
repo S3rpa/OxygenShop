@@ -1,0 +1,76 @@
+.cards{
+    background-color: rgb(249, 249, 249);
+    font-size: 1rem;
+    margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 4em;
+
+    &__container{
+        font-size: 1rem;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+        margin-top: 2em;
+        border-radius: 1.2em;
+        background-color: white;
+        max-width: 40em;
+        h2{
+            margin-top: 1em;
+            color: black;
+            font-size: 2rem;
+            font-weight: 400;
+            text-align: left;
+            padding-left: 1em;
+            padding-top: 1em;
+        }
+        p{
+            padding: 2em;
+            text-align: justify;
+        
+        }
+        .red-ellipse-small{
+            position: relative;
+            left: 3em;
+        }
+        .mac-mini{
+            position: absolute;
+            transform: translate(-6.5em, -6em);
+        }
+        .blue-small{
+            position: relative;
+            top: 1em;
+        }
+
+        .iphone-small{
+            position: absolute;
+            transform: translate(-4em, -7.3em);
+        }
+
+        &__green{
+            background-color: $bg-color-card;
+            border-radius: 0.5em;
+            
+        }
+        .red-ellipse-big,.mac-big,.blue-big,.iphone-big,.trumpet-big{
+            display: none;
+        }
+        
+        img.trumpet-small{
+            height: 12em;
+            width: 18em;
+        }
+        
+        .trumpet-small{
+            transform: translate(-1em,2em);
+        }
+    }
+    &__icon--wrapper{
+        position: relative;
+        margin: 0 auto 1em;
+    }
+        
+}
+
+    
+
