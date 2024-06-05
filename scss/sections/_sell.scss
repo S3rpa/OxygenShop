@@ -11,6 +11,7 @@
             color:black;
             font-weight: 200;
             padding-bottom: 0.8em;
+            
         }
     
         p{
@@ -44,15 +45,36 @@
         &__big{
             display: none;
         }
-        @media only screen and (min-width: 1000px) {    
-            &__small{
-                display: none;
+        
+}
+}
+@media only screen and (min-width: 1000px) {
+    .sell{
+        &__container{
+            &__heading{
+                font-size: 3em;
+                color:black;
+                font-weight: 200;
+                padding-bottom: 0.8em;
+                margin-right: 4em;
             }
-    
-            &__big{
-                width: 100%;
+            button {
                 display: block;
+                margin: 0 auto;
             }
         }
+    
+    &__bg{
+        width: 100%;
+        display: block;
+    &__small{
+        display: none;
+    }
+
+    &__big{
+        width: 100%;
+        display: block;
     }
 }
+
+}}

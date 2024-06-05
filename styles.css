@@ -131,7 +131,23 @@ h1, h2, h3, h4, h5, h6 {
 .sell__bg__big {
   display: none;
 }
+
 @media only screen and (min-width: 1000px) {
+  .sell__container__heading {
+    font-size: 3em;
+    color: black;
+    font-weight: 200;
+    padding-bottom: 0.8em;
+    margin-right: 4em;
+  }
+  .sell__container button {
+    display: block;
+    margin: 0 auto;
+  }
+  .sell__bg {
+    width: 100%;
+    display: block;
+  }
   .sell__bg__small {
     display: none;
   }
@@ -140,7 +156,6 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 }
-
 .features {
   text-align: center;
   font-size: 1rem;
