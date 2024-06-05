@@ -3,7 +3,6 @@
     font-size: 1rem;
     text-align: center;
     
-    
     &__container{
         padding: 2em;
 
@@ -16,7 +15,7 @@
     
         p{
             font-weight: 400;
-            padding-bottom: 1.2em;
+            padding-bottom: 3em;
         }
     
         button{
@@ -24,11 +23,12 @@
             border-radius: 3.5em;
             border: none;
             width: 70%;
-            max-width: 25em;
+            max-width: 32em;
             background-color: $primary-color;
-            color: white;
+            color: $secondary-color;
             padding: 2em;
-            font-weight: 600;
+            font-weight: bold;
+            font-size: 1rem;
             box-shadow: 5px 10px 14px 0px rgba(10,126,250,0.3);
         }
     }
@@ -43,6 +43,16 @@
 
         &__big{
             display: none;
+        }
+        @media only screen and (min-width: 1000px) {    
+            &__small{
+                display: none;
+            }
+    
+            &__big{
+                width: 100%;
+                display: block;
+            }
         }
     }
 }

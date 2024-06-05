@@ -2,7 +2,9 @@
     font-size: 1rem;
     padding-top: 3em;
     text-align: left;
-
+    .prices{
+        height: 50em;
+    }
     h2 {
         color: black;
         font-size: 2.5rem;
@@ -36,14 +38,17 @@
             color: black;
         }
         &--red{
-            padding: 2em;
+            padding: 2em 1em;
+            margin-left: 2em;
         }
         &--blue
         {
-            padding: 1em;
+            padding: 2em 0em;
+            margin-left: 2em;
         }
         &--green{
-            padding: 1em;
+            padding: 2em 0em;
+            margin-left: 2em;
         }
     }
 
@@ -91,11 +96,11 @@
         border-radius: 2em;
         width: 80%;
         margin: 0 auto;
-        padding: 1.5em 0;
+        padding: 1em 0;
         margin-bottom: 4em;
         position: relative;
         background-color: white;
-        max-width: 40em;
+        max-width: 20em;
 
         &--red {
             border-color: #EB476E;
@@ -109,8 +114,9 @@
             }
             &:hover {
                 box-shadow: 0px 4px 4px 0px rgba(235,71,110,1);
-                width: 85%;
+                width: 44%;
                 max-width: 43em;
+                height:33%;
             }          
             button:hover{
                 box-shadow: 0px 4px 4px 0px rgba(235,71,110,1);
@@ -130,7 +136,8 @@
             }
             &:hover{
                 box-shadow: 0px 4px 4px 0px rgba(7,172,230,1);
-                width: 85%;
+                width: 44%;
+                height:33%;
                 max-width: 43em;
             }
             button:hover{
@@ -150,13 +157,15 @@
                 background-color: #55DFB4;
             }
             &:hover{
-                box-shadow: 0px 4px 4px 0px rgba(85,223,180,1);
-                width: 85%;
+                width: 44%;
+                height:33% ;
                 max-width: 43em;
+                box-shadow: 0px 4px 4px 0px rgba(85,223,180,1);
             }
             button:hover{
                 box-shadow: 0px 4px 4px 0px rgba(85,223,180,1);
             }
+           
         }
 
         button {
@@ -175,4 +184,71 @@
            
     }
     
+}
+@media only screen and (min-width: 1000px) {
+    .pricing {
+        h2{
+            padding-left: 1em;
+        }
+        .prices {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            gap: 2em;
+        }
+
+        &__container {
+            height: 26em;
+            width: 25%; 
+            margin: 0 1em;
+            flex: none; 
+            max-width: 20em; 
+
+            &:hover {
+                width: 27%; 
+                max-width: 22em;
+                height: 28em;
+                padding-bottom: 2em;
+            }
+
+            .pricing__card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p, .pricing__list {
+                margin: 0.5em 2.5em;
+            }
+
+            .pricing__list {
+                width: 100%;
+                padding: 0 1em;
+                box-sizing: border-box;
+                text-align: center;
+            }
+
+            .pricing__list ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            .pricing__list li {
+                margin-bottom: 0.5em;
+                font-size: 1em;
+                display: flex;
+                align-items: center;
+                
+            }
+
+            .pricing__list img {
+                width: 1em;
+                height: 1em;
+                margin-right: 0.5em;
+            }
+        }
+    }
 }

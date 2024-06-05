@@ -24,6 +24,19 @@ footer {
         right: 10%;
         img {
             padding-left: 1.5em;
+            width: 48px;
+            height: 24px;
+            cursor: pointer;
         }
+        
+    
+    }
+}
+@media only screen and (min-width: 1000px) {
+    h2{
+        padding-left: 4em;
+    }
+    h4{
+        padding-left: 8em;
     }
 }
