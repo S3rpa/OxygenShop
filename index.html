@@ -197,18 +197,24 @@
             <h2>Any questions?</h2>
             <h4>Leave your email address or call us!</h4>
             
-                <div class="contact__date">
+                <div class="contact__container__info__date">
                     <img src="images/mail-icon.png" alt="Email Icon">
                     <span>sergiobarbera1@gmail.com</span>
                 </div>
-                <div class="contact__date">
+                <div class="contact__container__info__date">
                     <img src="images/phone-icon.png" alt="Phone Icon">
                     <span>+34 676 17 38 43</span>
                 </div>
             </div>
             <form action="#" method="post" class="contact__form">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
+                <div class="contact__form__container">
+                    <input id ="name" type="text" name="name" placeholder="" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="contact__form__container">
+                    <input id="email" type="email" name="email" placeholder="" required>
+                    <label for="email">Email</label>
+                </div>
                 <div class="checkbox-container">
                     <input class="contact__form__check" type="checkbox" id="consent" name="consent" required checked>
                     <label class="consent" for="consent">
@@ -232,9 +238,7 @@
             <h4>© 2022 OXYGEN, All Rights Reserved</h4>
             <div class="rss">
                 <img src="images/Twitter.png">
-                <a href="http://linkedin.com/in/sergio-barbera-solivella" target="_blank">
-                    <img src="images/Linkedin.png" class="linkedin">
-                </a>
+                <a href="www.linkedin.com/in/sergio-barbera-solivella"><img src="images/Linkedin.png" class="linkedin"></a>
             </div>
         </footer>
 </body>

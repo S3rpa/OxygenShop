@@ -12,10 +12,13 @@
         display: block;
         width: 80%;
         margin-top: 2em;
-        border-radius: 1.2em;
+        border-radius: 0.5em;
         background-color: white;
         max-width: 40em;
         
+        &__hr{
+            display: none;
+        }
         &__images{
             position: relative;
             margin-top: 1em;
@@ -24,7 +27,7 @@
 
             &__red-ellipse{
                 position: relative;
-                margin-left: 8em;
+                margin-left: 4.5em;
             }
             &__blue{
                 position: relative;

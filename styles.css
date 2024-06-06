@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__list li {
   padding-top: 1em;
   padding-inline: 1em;
+  text-transform: uppercase;
 }
 .header__list a {
   cursor: pointer;
@@ -254,9 +255,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 80%;
   margin-top: 2em;
-  border-radius: 1.2em;
+  border-radius: 0.5em;
   background-color: white;
   max-width: 40em;
+}
+.cards__container__hr, .cards__container--red__hr, .cards__container--green__hr {
+  display: none;
 }
 .cards__container__images, .cards__container--red__images, .cards__container--green__images {
   position: relative;
@@ -266,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .cards__container__images__red-ellipse, .cards__container--red__images__red-ellipse, .cards__container--green__images__red-ellipse {
   position: relative;
-  margin-left: 8em;
+  margin-left: 4.5em;
 }
 .cards__container__images__blue, .cards__container--red__images__blue, .cards__container--green__images__blue {
   position: relative;
@@ -470,7 +474,6 @@ h1, h2, h3, h4, h5, h6 {
 .pricing__card {
   display: inline-block;
   vertical-align: top;
-  text-align: left;
 }
 .pricing__card__text-center {
   text-align: center;
@@ -488,17 +491,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: black;
 }
-.pricing__card--red {
-  padding: 2em 1em;
-  margin-left: 2em;
-}
-.pricing__card--blue {
-  padding: 2em 0em;
-  margin-left: 2em;
-}
-.pricing__card--green {
-  padding: 2em 0em;
-  margin-left: 2em;
+.pricing__card--red, .pricing__card--blue, .pricing__card--green {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  margin-left: 1em;
 }
 .pricing__list {
   display: inline-block;
@@ -520,22 +517,25 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 }
 .pricing__list--red {
-  margin-left: 2.5em;
+  padding-left: 17%;
+  padding-bottom: 1em;
 }
 .pricing__list--blue {
-  margin-left: 1em;
+  padding-left: 8%;
+  padding-bottom: 1em;
 }
 .pricing__list--green {
-  margin-left: 3em;
+  padding-left: 15%;
+  padding-bottom: 1em;
 }
 .pricing__container {
   display: block;
   border: solid 0.1em;
   border-radius: 2em;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 1em 0;
-  margin-bottom: 4em;
+  margin-bottom: 6em;
   position: relative;
   background-color: white;
   max-width: 20em;
@@ -552,13 +552,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #EB476E;
 }
 .pricing__container--red:hover {
-  box-shadow: 0px 4px 4px 0px rgb(235, 71, 110);
-  width: 44%;
-  max-width: 43em;
-  height: 33%;
+  box-shadow: -2px 2px 20px 0px rgb(235, 71, 110);
+  transform: scale(1.1);
 }
 .pricing__container--red button:hover {
-  box-shadow: 0px 4px 4px 0px rgb(235, 71, 110);
+  box-shadow: -2px 2px 20px 0px rgb(235, 71, 110);
 }
 .pricing__container--blue {
   border-color: #07ACE6;
@@ -572,13 +570,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #007BFF;
 }
 .pricing__container--blue:hover {
-  box-shadow: 0px 4px 4px 0px rgb(7, 172, 230);
-  width: 44%;
-  height: 33%;
-  max-width: 43em;
+  box-shadow: -2px 2px 20px 0px rgb(8, 166, 228);
+  transform: scale(1.1);
 }
 .pricing__container--blue button:hover {
-  box-shadow: 0px 4px 4px 0px rgb(7, 172, 230);
+  box-shadow: -2px 2px 20px 0px rgb(8, 166, 228);
 }
 .pricing__container--green {
   border-color: #55DFB4;
@@ -592,13 +588,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #55DFB4;
 }
 .pricing__container--green:hover {
-  width: 44%;
-  height: 33%;
-  max-width: 43em;
-  box-shadow: 0px 4px 4px 0px rgb(85, 223, 180);
+  transform: scale(1.1);
+  box-shadow: -2px 2px 20px 0px rgb(85, 223, 180);
 }
 .pricing__container--green button:hover {
-  box-shadow: 0px 4px 4px 0px rgb(85, 223, 180);
+  box-shadow: -2px 2px 20px 0px rgb(85, 223, 180);
 }
 .pricing__container button {
   border-radius: 2em;
@@ -623,7 +617,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    gap: 2em;
+    gap: 3em;
   }
   .pricing__container {
     height: 26em;
@@ -633,38 +627,40 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 20em;
   }
   .pricing__container:hover {
-    width: 27%;
-    max-width: 22em;
-    height: 28em;
     padding-bottom: 2em;
+    transform: scale(1.1);
   }
   .pricing__container .pricing__card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
   }
-  .pricing__container p, .pricing__container .pricing__list {
-    margin: 0.5em 2.5em;
+  .pricing__container p {
+    margin: 0.5em 1.5em;
   }
   .pricing__container .pricing__list {
-    width: 100%;
-    padding: 0 1em;
-    box-sizing: border-box;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 2em;
   }
-  .pricing__container .pricing__list ul {
+  .pricing__container .pricing__list .pricing__list ul {
     padding: 0;
     margin: 0;
     list-style: none;
   }
-  .pricing__container .pricing__list li {
+  .pricing__container .pricing__list .pricing__list li {
     margin-bottom: 0.5em;
     font-size: 1em;
     display: flex;
     align-items: center;
   }
-  .pricing__container .pricing__list img {
+  .pricing__container .pricing__list .pricing__list img {
     width: 1em;
     height: 1em;
     margin-right: 0.5em;
@@ -686,6 +682,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: bold;
   font-size: 1rem;
   color: black;
+  margin-bottom: 1em;
 }
 .contact__container p {
   font-size: 1rem;
@@ -699,40 +696,52 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   margin-top: 2em;
 }
-.contact__container__info .contact__email, .contact__container__info .contact__phone {
-  margin-bottom: 1em;
-  text-align: left;
+.contact__container__info__date {
+  margin-top: 1em;
 }
-.contact__container__info .contact__email img, .contact__container__info .contact__phone img {
+.contact__container__info__date img {
   margin-right: 0.5em;
-  vertical-align: middle;
+  position: relative;
 }
-.contact__container__info .contact__email span, .contact__container__info .contact__phone span {
+.contact__container__info__date span {
   line-height: 2;
   font-size: 1rem;
-  vertical-align: middle;
+  position: relative;
+  bottom: 0.5em;
 }
 .contact__form {
   max-width: 30em;
   margin: 0 auto;
   text-align: left;
   margin-top: 3em;
+  position: relative;
 }
 .contact__form input[type=text], .contact__form input[type=email] {
   width: 100%;
   margin-bottom: 2em;
   border: none;
   border-bottom: 1px solid #95989a;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   font-size: 0.7rem;
+  background: none;
 }
-.contact__form input::placeholder {
+.contact__form input[type=text]:focus, .contact__form input[type=email]:focus {
+  outline: none;
+  border-bottom: 1px solid #08A6E4;
+}
+.contact__form__container {
+  position: relative;
+}
+.contact__form__container label {
   font-family: "Open Sans";
   color: #08A6E4;
   letter-spacing: 0.2em;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: bold;
+  position: absolute;
+  top: -1em;
+  left: 0;
 }
 .contact__form .checkbox-container {
   margin-top: 2em;
@@ -751,7 +760,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0.2em;
 }
 .contact__form__check:checked {
-  background-image: url("../../images/checked.png");
+  background-image: url("images/checked.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -784,34 +793,34 @@ h1, h2, h3, h4, h5, h6 {
 .contact__form button:hover {
   box-shadow: 0px 4px 4px 0px rgb(7, 172, 230);
 }
-
 @media only screen and (min-width: 1000px) {
-  .contact__container {
+  .contact .contact__container {
     display: inline-flex;
     justify-content: center;
     flex-direction: row;
     gap: 3em;
   }
-  .contact__container h2 {
+  .contact .contact__container h2 {
     padding-right: 2em;
     margin-right: -1em;
     padding-left: 1em;
   }
-  .contact__container h4 {
+  .contact .contact__container h4 {
     padding: 1em 5em 2em 3em;
   }
-  .contact__container__info {
+  .contact .contact__container__info {
     max-width: 30em;
   }
-  .contact__date {
+  .contact .contact__date {
     display: inline-flex;
     padding-right: 2em;
   }
-  button {
+  .contact button {
     display: block;
     margin: 0;
   }
 }
+
 footer {
   padding: 1.5em 0;
   position: relative;

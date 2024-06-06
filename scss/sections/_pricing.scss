@@ -16,7 +16,7 @@
     &__card {
         display: inline-block;
         vertical-align: top;
-        text-align: left;
+        
         
 
         &__text-center {
@@ -37,26 +37,17 @@
             font-weight: bold;
             color: black;
         }
-        &--red{
-            padding: 2em 1em;
-            margin-left: 2em;
-        }
-        &--blue
-        {
-            padding: 2em 0em;
-            margin-left: 2em;
-        }
-        &--green{
-            padding: 2em 0em;
-            margin-left: 2em;
+        &--red,&--blue,&--green{
+            padding-top: 2em;
+            padding-bottom: 1em;
+            padding-left: 0.5em;
+            margin-left: 1em;
         }
     }
 
     &__list {
         display: inline-block;
-        text-align: justify;
-        
-        
+        text-align: justify;    
 
         ul {
             padding: 0;
@@ -77,16 +68,19 @@
         }
         &--red
         {
-            margin-left: 2.5em;
+            padding-left: 17%;
+            padding-bottom:1em;
             
         }
         &--blue
         {
-            margin-left: 1em;
+            padding-left: 8%;
+            padding-bottom:1em;
         }
 
         &--green{
-            margin-left: 3em;
+            padding-left: 15%;
+            padding-bottom:1em;
         }
     }
 
@@ -94,10 +88,10 @@
         display: block;
         border: solid 0.1em;
         border-radius: 2em;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         padding: 1em 0;
-        margin-bottom: 4em;
+        margin-bottom: 6em;
         position: relative;
         background-color: white;
         max-width: 20em;
@@ -113,13 +107,11 @@
                 background-color: #EB476E;
             }
             &:hover {
-                box-shadow: 0px 4px 4px 0px rgba(235,71,110,1);
-                width: 44%;
-                max-width: 43em;
-                height:33%;
+                box-shadow: -2px 2px 20px 0px rgba(235,71,110,1);
+                transform: scale(1.1);
             }          
             button:hover{
-                box-shadow: 0px 4px 4px 0px rgba(235,71,110,1);
+                box-shadow: -2px 2px 20px 0px rgba(235,71,110,1);
             }
         }
         
@@ -135,13 +127,11 @@
                 background-color: #007BFF;
             }
             &:hover{
-                box-shadow: 0px 4px 4px 0px rgba(7,172,230,1);
-                width: 44%;
-                height:33%;
-                max-width: 43em;
+                box-shadow: -2px 2px 20px 0px rgba(8,166,228,1);
+                transform: scale(1.1);
             }
             button:hover{
-                box-shadow: 0px 4px 4px 0px rgba(7,172,230,1);
+                box-shadow: -2px 2px 20px 0px rgba(8,166,228,1);
             }
         }
        
@@ -157,13 +147,11 @@
                 background-color: #55DFB4;
             }
             &:hover{
-                width: 44%;
-                height:33% ;
-                max-width: 43em;
-                box-shadow: 0px 4px 4px 0px rgba(85,223,180,1);
+                transform: scale(1.1);
+                box-shadow: -2px 2px 20px 0px rgba(85,223,180,1);
             }
             button:hover{
-                box-shadow: 0px 4px 4px 0px rgba(85,223,180,1);
+                box-shadow: -2px 2px 20px 0px rgba(85,223,180,1);
             }
            
         }
@@ -195,7 +183,7 @@
             justify-content: center;
             align-items: flex-start;
             width: 100%;
-            gap: 2em;
+            gap: 3em;
         }
 
         &__container {
@@ -204,12 +192,11 @@
             margin: 0 1em;
             flex: none; 
             max-width: 20em; 
+            
 
             &:hover {
-                width: 27%; 
-                max-width: 22em;
-                height: 28em;
                 padding-bottom: 2em;
+                transform: scale(1.1);
             }
 
             .pricing__card {
@@ -217,18 +204,21 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                margin: 0;
+                padding: 0;
             }
 
-            p, .pricing__list {
-                margin: 0.5em 2.5em;
+            p {
+                margin: 0.5em 1.5em;
             }
 
             .pricing__list {
-                width: 100%;
-                padding: 0 1em;
-                box-sizing: border-box;
-                text-align: center;
-            }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                margin-top: 2em;
 
             .pricing__list ul {
                 padding: 0;
@@ -251,4 +241,4 @@
             }
         }
     }
-}
+}}
