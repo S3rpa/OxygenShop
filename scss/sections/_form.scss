@@ -1,0 +1,182 @@
+.contact {
+    font-size: 1rem;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: 5em;
+
+    &__container {
+
+        h2 {
+            color: black;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        h4{
+            font-family: 'Open Sans';
+            font-family: bold;
+            font-size: 1rem;
+            color: black;
+            margin-bottom: 1em;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1em;
+        }
+
+        &__info {
+            color: #A5A5A5;
+            margin-bottom: 2em;
+            max-width: 30em;
+            margin: 0 auto;
+            margin-top: 2em;
+            
+                &__date{
+                    margin-top: 1em;
+                
+                    img {
+                        margin-right: 0.5em;
+                        position: relative;   
+                                  
+                    }
+                    span {
+                        line-height: 2;
+                        font-size: 1rem;  
+                        position: relative; 
+                        bottom:0.5em;         
+                    }
+                }
+            
+        }
+        
+    }
+
+    &__form {
+        max-width: 30em;
+        margin: 0 auto;
+        text-align: left;
+        margin-top: 3em;
+        position: relative;
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            margin-bottom: 2em;
+            border: none;
+            border-bottom: 1px solid #95989a;
+            padding-bottom: 0.5em;
+            font-size: 1rem;
+            background: none;
+            
+            
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid #08A6E4;
+            }
+            
+        }
+        
+        &__container{
+            position: relative;
+        
+        label {
+            font-family: 'Open Sans';
+            color: #08A6E4;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: absolute;
+            top:-2em;
+            left: 0;
+            }
+        }
+        .checkbox-container {
+            margin-top: 2em;
+            margin-bottom: 1em;   
+            line-height: 1.5;
+        }
+
+        &__check {
+            border-radius: 0.25em;
+            width: 1.6em;
+            height: 1.6em;
+            appearance: none;
+            border: 0.1em solid #707070;
+            vertical-align: middle;
+            margin-right: 0.5em;
+            position: relative;
+            top: 0.2em;
+
+            &:checked {
+                background-image: url("images/checked.png");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        .consent {
+            color: #707070;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+            width: 90%; 
+            margin-left: 2em; 
+            text-align: justify;
+            transform: translateY(-1.8em);
+        }
+
+        button {
+            background-color: #08A6E4;
+            color: white;
+            padding: 1em 6em;
+            border: none;
+            border-radius: 2em;
+            font-family: 'Open Sans';
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 1em auto 0 auto;
+            display: block;
+            position: relative;
+            left:10%;
+        }
+
+        button:hover {
+            box-shadow: 0px 4px 4px 0px rgba(7, 172, 230, 1);
+        }
+    }
+@media only screen and (min-width: 1000px) {
+   .contact{
+        &__container{
+            display: inline-flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 3em;
+
+            h2{
+                padding-right: 2em;
+                margin-right: -1em;
+                padding-left: 1em;
+            }
+
+            h4{
+                padding: 1em 5em 2em 3em;
+            }
+
+            &__info{
+                max-width: 30em;
+            }
+        }
+        &__date{
+            display: inline-flex;
+            padding-right: 2em;
+        }
+
+    }
+    button{
+        display: block;
+        margin: 0;
+    }
+}
+}

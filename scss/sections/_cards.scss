@@ -1,0 +1,246 @@
+.cards{
+    background-color: rgb(249, 249, 249);
+    font-size: 1rem;
+    margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 4em;
+
+    &__container,&__container--red,&__container--green{
+        font-size: 1rem;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+        margin-top: 2em;
+        border-radius: 0.5em;
+        background-color: white;
+        max-width: 40em;
+        
+        &__hr{
+            display: none;
+        }
+        &__images{
+            position: relative;
+            margin-top: 1em;
+            padding: 1.2em;
+            margin: auto;
+
+            &__red-ellipse{
+                position: relative;
+                margin-left: 4.5em;
+            }
+            &__blue{
+                position: relative;
+                top: 1em;   
+            }
+            &__pc{
+                position: absolute;
+                transform: translate(-13.5em, 2em);      
+            }
+    
+            &__phone{
+                position: absolute;
+                transform: translate(-8em, 1.7em);
+            }
+        }
+        
+           
+        h2{
+            color: black;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: left;
+            padding-left: 1em;
+            padding-top: 1em;
+        }
+        p{
+            padding: 2em;
+            text-align: justify;
+        
+        }
+       
+
+        .green{
+            position: relative;
+            background-color: $bg-color-card;
+            border-radius: 0.5em;
+            transform: translate(0.2em,-0.2em);       
+        }
+           
+        &__trumpet{
+            height: 12em;
+            width: 18em;
+            margin-top: 2em;
+        }
+        
+    }
+
+    .greenhidden{
+        background-color: $bg-color-card;
+        border-radius: 0.3em;
+        width: 10em;
+        height: 20em;
+        display: none;
+    }
+
+    #hidden
+    {
+        margin: 7em;
+        display: flex;
+        align-items: center;
+        width: 11em;
+        height: 11em;
+    }
+    
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .cards{
+        display: flexbox;
+        padding: 2em;
+        padding-top: 4em;
+        padding-bottom: 7em;   
+
+        &__container{
+            @include flex-center; 
+            $color: #08A6E4;
+            padding: 3em;
+            max-width: 72em;
+            width: 80%;
+            height: 20em;
+
+            h2{
+                width: 53%;
+            }
+            p{
+                width: 95%;
+                padding: 2em;
+            }
+
+            &__hr{
+                display: block;
+                border-bottom: 2px solid $color;
+                width: 60%;
+                margin-left: 2.5em;
+                margin-bottom: 4em;
+            }
+            &__text{
+                padding-top: 1em;
+                padding-inline: 2em;
+                margin: 0 auto;
+                position: relative;
+                left: 6em;
+                text-align: left;
+                width: 61%;
+            }
+            &__images{
+                &__red-ellipse{
+                    width: 14em;
+                    top: -3em;
+                    left: 2em;
+                }
+                &__blue{
+                    width: 14em;
+                    top: -3em;                                  
+                }
+                &__pc
+                {
+                    width: 18em;
+                    margin-top: 1em;
+                    margin-left: -5.5em;
+                }
+                &__phone
+                {
+                    width: 18em;
+                    margin-top: -3em;
+                    margin-left: -7em;
+                }
+            }
+        }
+        &__container--red{
+            @include flex-center; 
+            $color: #FB3B64;
+            padding: 3em;
+            max-width: 72em;
+            width: 80%;
+            height: 20em;
+            flex-direction: row-reverse;
+
+            h2{
+                width: 92%;
+            }
+            p{
+                width: 100%;
+                padding: 1em 2em;
+            }
+
+            &__hr{
+                display: block;
+                border-bottom: 2px solid $color;
+                width: 60%;
+                margin-left: 2.5em;
+                margin-bottom: 3em;
+            }
+            &__text{
+                padding-top: 1em;
+                padding-inline: 2em;
+                margin: 0 auto;
+                position: relative;
+                left: -4em;
+                text-align: left;
+                width: 61%;
+            }
+        }
+
+        #card-green{
+            @include flex-center; 
+            justify-content: space-between;
+            max-width: 72em;
+            width: 80%;
+            height: 20em;
+            margin: 3em auto;
+        }
+
+        &__container--green{
+            @include flex-center; 
+            $color: $bg-color-card;
+            padding: 1em;
+            max-width: 40em;
+            height: 20em;
+            margin: 0;
+            
+            h2{
+                width: 70%;
+            }
+            p{
+                width: 85%;
+                padding: 2em;
+            }
+
+            &__hr{
+                display: block;
+                border-bottom: 2px solid $color;
+                width: 60%;
+                margin-left: 2.5em;
+                margin-bottom: 2.5em;
+            }
+        }
+
+        .greenhidden{
+            @include flex-center; 
+            width: 50%;
+            margin-left: 3em;
+        }
+
+        .green{
+            display: none;
+            margin-top: 2em;
+        }
+
+        &__trumpet{
+            display: none;
+        }
+
+    }
+}
