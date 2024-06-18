@@ -1,3 +1,17 @@
+.indicator{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0.5em;
+    background-color: white;
+    width: 100%;
+}
+.indicator span{
+    background-color: $primary-color;
+    width: 0%;
+    height: 0.5em;
+    display: block;
+}
 .sell{
     display: block;
     font-size: 1rem;
