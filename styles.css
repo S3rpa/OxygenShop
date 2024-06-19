@@ -94,6 +94,25 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 4em;
   }
 }
+#bttnTop {
+  position: fixed;
+  bottom: 1.5em;
+  right: 0;
+  z-index: 1;
+  padding: 1.2em;
+  font-size: 1em;
+  color: white;
+  border: none;
+  background-color: #08A6E4;
+  cursor: pointer;
+  border-radius: 0.3em;
+  opacity: 0.8;
+}
+
+#bttnTop:hover {
+  background-color: rgb(76, 138, 255);
+}
+
 .indicator {
   position: fixed;
   top: 0;
@@ -101,6 +120,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 0.5em;
   background-color: white;
   width: 100%;
+  z-index: 1;
 }
 
 .indicator span {
@@ -174,6 +194,24 @@ h1, h2, h3, h4, h5, h6 {
   .sell__bg__big {
     width: 100%;
     display: block;
+  }
+  #bttnTop {
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.8em;
+    z-index: 1;
+    padding: 1.2em;
+    font-size: 1.3em;
+    color: white;
+    border: none;
+    background-color: #08A6E4;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: opacity 0.4s ease-out;
+    opacity: 0.8;
+  }
+  #bttnTop:hover {
+    background-color: rgb(76, 138, 255);
   }
 }
 .features {

@@ -1,7 +1,7 @@
-let bttnTop = document.getElementById('bttnTop');
+const bttnTop = document.getElementById('bttnTop');
 
-    const scrollTop = () => {
-        if(document.body.scrollTop > 16 || document.documentElement.scrollTop > 16){
+    const scroll = () => {
+        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
             bttnTop.style.display = 'block';
         }
         else{
@@ -11,8 +11,13 @@ let bttnTop = document.getElementById('bttnTop');
 
 
 const toTop = () => {
-    document.body.scrollTop = 0;
-    documen.documentElement.scrollTop = 0;
+    setTimeout(() => {
+        document.documentElement.scrollTop = ({top:0, behavior:"smooth"});
+    },200);
 }
+
+// Enseñar el botón a los 20px
+window.onscroll = () => {scroll()};
+
 
 window.addEventListener('click',toTop);
