@@ -20,4 +20,4 @@ const toTop = () => {
 window.onscroll = () => {scroll()};
 
 
-window.addEventListener('click',toTop);
+bttnTop.addEventListener('click',toTop);

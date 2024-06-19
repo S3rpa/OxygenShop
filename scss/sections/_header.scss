@@ -2,10 +2,11 @@
     display: inline-block;
     background-color: $secondary-color;
     width: 100%;
+    height: calc(4.4rem - 0.4px);
     position: relative;
     margin-bottom: 6em;
     box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
-    padding: 1em 1em;
+    padding: 1em;
 
     &__logo {
         font-size: 2em;
@@ -52,7 +53,7 @@
         a:hover
         {
             color: black;
-            border-bottom: 4px solid $primary-color;
+            
         }
         &.visible {
             display: block;
@@ -75,9 +76,17 @@
         &__list{
             display: inline-flex !important;
             justify-content: flex-end;
-            margin-right: 4em;
-            
+            margin-right: 4em; 
+            height: 100%;
+            &__item:hover{
+                color:black;
+                border-bottom: 4px solid $primary-color;
+            }   
         }
+        a{
+            padding-bottom: 0;
+        }
+        
         
     }
 }
