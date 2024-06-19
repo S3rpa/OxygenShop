@@ -25,10 +25,11 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   background-color: #FFFFFF;
   width: 100%;
+  height: calc(4.4rem - 0.4px);
   position: relative;
   margin-bottom: 6em;
   box-shadow: -1px -1px 5px 0px rgba(0, 0, 0, 0.75);
-  padding: 1em 1em;
+  padding: 1em;
 }
 .header__logo {
   font-size: 2em;
@@ -70,7 +71,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__list a:hover {
   color: black;
-  border-bottom: 4px solid #08A6E4;
 }
 .header__list.visible {
   display: block;
@@ -92,6 +92,14 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex !important;
     justify-content: flex-end;
     margin-right: 4em;
+    height: 100%;
+  }
+  .header__list__item:hover {
+    color: black;
+    border-bottom: 4px solid #08A6E4;
+  }
+  .header a {
+    padding-bottom: 0;
   }
 }
 #bttnTop {
