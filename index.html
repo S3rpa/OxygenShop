@@ -207,17 +207,20 @@
                     <span>+34 676 17 38 43</span>
                 </div>
             </div>
-            <form action="#" method="post" class="contact__form">
+            <form method="post" id="form" class="contact__form">
                 <div class="contact__form__container">
-                    <input id ="name" type="text" name="name" placeholder="" required>
+                    <input id ="name" type="text" name="name" placeholder="">
                     <label for="name">Name</label>
+                    <p class="contact__form__container--error--name">El nombre no puede contener carácteres especiales ni espacios.</p>
+
                 </div>
                 <div class="contact__form__container">
-                    <input id="email" type="email" name="email" placeholder="" required>
+                    <input id="email" type="text" name="email" placeholder="">
                     <label for="email">Email</label>
+                    <p class="contact__form__container--error--email">El email debe de ser válido.</p>
                 </div>
                 <div class="checkbox-container">
-                    <input class="contact__form__check" type="checkbox" id="consent" name="consent" required checked>
+                    <input class="contact__form__check" type="checkbox" id="consent" name="consent">
                     <label class="consent" for="consent">
                         <p>
                             I hereby give consent for my personal data included in my application to be processed
@@ -226,16 +229,20 @@
                             with regard to the processing of personal data and on the free movement of such data, and
                             repealing Directive 95/46/EC (Data Protection Directive)
                         </p>
+
                     </label>
                 </div>
                 <button type="submit">Send</button>
+                <div class="contact__form__msj">
+                    <p><span>Error:</span>Rellena los campos correctamente.</p>
+                </div>
             </form>
         </div>
     </section>    
     </main>
     <footer>
             <h2>OXYGENShop</h2>
-            <h4>© 2022 OXYGEN, All Rights Reserved</h4>
+            <h4>© 2024 OXYGEN, All Rights Reserved</h4>
             <div class="rss">
                 <img src="images/Twitter.png">
                 <a href="www.linkedin.com/in/sergio-barbera-solivella"><img src="images/Linkedin.png" class="linkedin"></a>
@@ -244,6 +251,7 @@
         <script src="js/menu.js"></script>
         <script src="js/scroller.js"></script>
         <script src="js/bttntop.js"></script>
+        <script src="js/form.js"></script>
 </body>
 </html>
 
