@@ -731,6 +731,22 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 0.5em;
   }
 }
+.contact__form__msj {
+  display: none;
+  margin-top: 4em;
+  border-radius: 5px;
+  background-color: #F66060;
+  height: 3em;
+  padding: 0 1em;
+  line-height: 3em;
+}
+.contact__form__msj p {
+  margin: 0;
+}
+.contact__form__msj span {
+  font-weight: bold;
+}
+
 .contact {
   font-size: 1rem;
   padding: 2em;
@@ -781,21 +797,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 3em;
   position: relative;
 }
-.contact__form input[type=text], .contact__form input[type=email] {
-  width: 100%;
-  margin-bottom: 2em;
-  border: none;
-  border-bottom: 1px solid #95989a;
-  padding-bottom: 0.5em;
-  font-size: 1rem;
-  background: none;
-}
-.contact__form input[type=text]:focus, .contact__form input[type=email]:focus {
-  outline: none;
-  border-bottom: 1px solid #08A6E4;
-}
 .contact__form__container {
   position: relative;
+  padding-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 .contact__form__container label {
   font-family: "Open Sans";
@@ -807,6 +812,31 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: -2em;
   left: 0;
+}
+.contact__form__container input[type=text] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #95989a;
+  padding-bottom: 0.5em;
+  font-size: 1rem;
+  background: none;
+}
+.contact__form__container input[type=text]:focus {
+  outline: none;
+  border-bottom: 1px solid #08A6E4;
+}
+.contact__form__container--error--email, .contact__form__container--error--name {
+  display: none;
+  margin-top: 1em;
+  color: red;
+}
+.contact__form__container--border--green input {
+  border: none;
+  border-bottom: 1px solid #1ed12d;
+}
+.contact__form__container--border--red input {
+  border: none;
+  border-bottom: 1px solid #F66060;
 }
 .contact__form .checkbox-container {
   margin-top: 2em;
@@ -857,6 +887,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .contact__form button:hover {
   box-shadow: 0px 4px 4px 0px rgb(7, 172, 230);
+}
+.contact__form__msj {
+  margin-top: 4em;
+  display: none;
+  border-radius: 5px;
+  background-color: #F66060;
+  height: 3em;
+  padding: 0 1em;
+  line-height: 3em;
+}
+.contact__form__msj p {
+  margin: 0;
+}
+.contact__form__msj span {
+  font-weight: bold;
 }
 @media only screen and (min-width: 1000px) {
   .contact .contact__container {
