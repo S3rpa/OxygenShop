@@ -830,13 +830,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1em;
   color: red;
 }
-.contact__form__container--border--green input {
-  border: none;
-  border-bottom: 1px solid #1ed12d;
+.contact__form__container--border--green {
+  border-bottom: 1px solid #1ed12d !important;
 }
-.contact__form__container--border--red input {
-  border: none;
-  border-bottom: 1px solid #F66060;
+.contact__form__container--border--red {
+  border-bottom: 1px solid #F66060 !important;
 }
 .contact__form .checkbox-container {
   margin-top: 2em;

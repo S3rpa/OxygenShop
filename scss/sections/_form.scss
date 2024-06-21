@@ -107,13 +107,11 @@
             margin-top: 1em;
             color:red;
         }
-        &__container--border--green input{
-            border: none;
-            border-bottom: 1px solid #1ed12d;
+        &__container--border--green{
+            border-bottom: 1px solid #1ed12d !important;
         }
-        &__container--border--red input{
-            border: none;
-            border-bottom: 1px solid #F66060; 
+        &__container--border--red{
+            border-bottom: 1px solid #F66060 !important; 
         }
         .checkbox-container {
             margin-top: 2em;
