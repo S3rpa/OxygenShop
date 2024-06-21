@@ -1,4 +1,5 @@
 const formulario = document.getElementById('form');
+const url = 'https://jsonplaceholder.typicode.com/posts'
 
 const expresiones = {
     name: /^[A-Za-z]{2,100}$/,
@@ -49,7 +50,10 @@ formulario.addEventListener('submit', (event) => {
 
     if (validName === true && validCheckbox == true && validEmail == true){
         document.querySelector('.contact__form__msj').style.display = 'none';
-        window.alert("Formulario rellenado correctamente!");     
+        formApi(nameInput,emailInput); 
+        nameInput.value = '';
+        emailInput.value = '';
+        checkBox.checked = false;    
     } 
     else{
         document.querySelector('.contact__form__msj').style.display = 'block';
@@ -57,3 +61,19 @@ formulario.addEventListener('submit', (event) => {
 });
 
 
+const formApi = (nameInput,emailInput) =>{
+    
+    fetch('url', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: nameInput,
+          email: emailInput,
+          checkBox: true,  
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json()).catch((e) => console.log(e))
+        .then(window.alert("Formulario rellenado correctamente!"))
+}
