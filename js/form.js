@@ -26,6 +26,7 @@ formulario.addEventListener('submit', (event) => {
     } 
     else{ 
         validName = true;
+        nameInput.classList.remove('contact__form__container--border--red');
         nameInput.classList.add('contact__form__container--border--green');
         document.querySelector('.contact__form__container--error--name').style.display = 'none';   
     }
@@ -37,7 +38,8 @@ formulario.addEventListener('submit', (event) => {
     } 
     else{
         validEmail = true;
-        emailInput.classList.remove('contact__form__container--border--green');
+        emailInput.classList.remove('contact__form__container--border--red');
+        emailInput.classList.add('contact__form__container--border--green');
         document.querySelector('.contact__form__container--error--email').style.display = 'none'; 
     }
     
@@ -50,10 +52,16 @@ formulario.addEventListener('submit', (event) => {
 
     if (validName === true && validCheckbox == true && validEmail == true){
         document.querySelector('.contact__form__msj').style.display = 'none';
+        
         formApi(nameInput,emailInput); 
+        
         nameInput.value = '';
         emailInput.value = '';
-        checkBox.checked = false;    
+        checkBox.checked = false;
+        
+        nameInput.classList.remove('contact__form__container--border--green');
+        emailInput.classList.remove('contact__form__container--border--green');
+
     } 
     else{
         document.querySelector('.contact__form__msj').style.display = 'block';
