@@ -1,3 +1,39 @@
+#currency-selector {
+    background-color: #f8f9fa;
+    border: 0.2em solid #ced4da;
+    border-radius: 0.5em;
+    color: #495057;
+    font-size: 1em;
+    padding: 0.5em 2em 0.5em 0.75em;
+    margin: 1em auto;
+    width: auto;
+    min-width: 8em;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+#currency-selector:hover {
+    border-color: #adb5bd;
+}
+
+#currency-selector:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.125em rgba(0,123,255,.25);
+    outline: 0;
+}
+
+#currency-selector::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 0.75em;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
 .pricing {
     font-size: 1rem;
     padding-top: 3em;
