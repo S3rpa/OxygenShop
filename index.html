@@ -9,6 +9,18 @@
 </head>
 <body>
     <main>
+        <div class="popup" id="popup">
+            <div class="popup__newslform">
+                <button class="popup__newslform--close" id="close">X</button>
+                <h2>Subscribe our newsletter!</h2>
+                <form method="POST" id="newslform">
+                    <input type="text" name="nameNw" id="nameNw" placeholder="Nombre">
+                    <input type="text" name="emailNw" id="emailNw" placeholder="Email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+
 
     <header class="header">
             <h1 class="header__logo">OXYGENShop</h1>
@@ -248,10 +260,11 @@
                 <a href="www.linkedin.com/in/sergio-barbera-solivella"><img src="images/Linkedin.png" class="linkedin"></a>
             </div>
         </footer>
+        <script src="js/newsletter.js"></script>
         <script src="js/menu.js"></script>
         <script src="js/scroller.js"></script>
         <script src="js/bttntop.js"></script>
-        <script src="js/form.js"></script>
+        <script src="js/form.js"></script>    
 </body>
 </html>
 
