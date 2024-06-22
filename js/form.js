@@ -58,14 +58,15 @@ formulario.addEventListener('submit', (event) => {
         nameInput.value = '';
         emailInput.value = '';
         checkBox.checked = false;
-        
+
         nameInput.classList.remove('contact__form__container--border--green');
         emailInput.classList.remove('contact__form__container--border--green');
-
     } 
     else{
         document.querySelector('.contact__form__msj').style.display = 'block';
     }
+
+    
 });
 
 
