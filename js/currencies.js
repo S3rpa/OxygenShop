@@ -20,14 +20,14 @@ async function updateCurrency() {
         const response = await fetch(urlApi);
         const rates = await response.json();
 
-        const currencyMap = {
+        const currency = {
             EUR: rates.eur.eur,
             USD: rates.eur.usd,
             GBP: rates.eur.gbp
         };
 
         const selectedCurrency = currencySelector.value;
-        const rate = currencyMap[selectedCurrency];
+        const rate = currency[selectedCurrency];
 
         // Actualizar precios
         for (const key in priceElements) {
