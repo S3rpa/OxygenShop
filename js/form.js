@@ -50,7 +50,7 @@ formulario.addEventListener('submit', (event) => {
         validCheckbox = true;
     }
 
-    if (validName === true && validCheckbox == true && validEmail == true){
+    if (validName && validCheckbox && validEmail){
         document.querySelector('.contact__form__msj').style.display = 'none';
         
         formApi(nameInput,emailInput); 
