@@ -1,13 +1,13 @@
 class Slider{
     constructor (){
-    this.sliderImages = document.querySelectorAll('.slider-container__slider img');
-    this.next = document.getElementById('next');
-    this.prev = document.getElementById('prev');
-    this.dots = document.querySelectorAll('.dots__container__dot');
-    this.counter = 0;
-    this.autoplayInterval = null;
+    this._sliderImages = document.querySelectorAll('.slider-container__slider img');
+    this._next = document.getElementById('next');
+    this._prev = document.getElementById('prev');
+    this._dots = document.querySelectorAll('.dots__container__dot');
+    this._counter = 0;
+    this._autoplayInterval = null;
 
-    // Damos un valor this a la función
+    // Damos un valor this a la función con bind
 
     this.slideNext = this.slideNext.bind(this);
     this.slidePrev = this.slidePrev.bind(this);
@@ -17,6 +17,30 @@ class Slider{
     this.clickDots();
 
     this.startAutoplay();
+    }
+    
+    get sliderImages() {
+        return this._sliderImages;
+    }
+
+    get next() {
+        return this._next;
+    }
+
+    get prev() {
+        return this._prev;
+    }
+
+    get dots() {
+        return this._dots;
+    }
+
+    get counter() {
+        return this._counter;
+    }
+
+    get autoplayInterval() {
+        return this._autoplayInterval;
     }
 
     startAutoplay() {
