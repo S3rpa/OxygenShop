@@ -64,25 +64,31 @@ formulario.addEventListener('submit', (event) => {
     } 
     else{
         document.querySelector('.contact__form__msj').style.display = 'block';
-    }
-
-    
+    }  
 });
 
 
-const formApi = (nameInput,emailInput) =>{
-    
+const formApi = (nameInput, emailInput) => {
     fetch('url', {
         method: 'POST',
         body: JSON.stringify({
-          name: nameInput,
-          email: emailInput,
-          checkBox: true,  
+            name: nameInput,
+            email: emailInput,
+            checkBox: true,
         }),
         headers: {
-          'Content-type': 'application/json; charset=UTF-8',
+            'Content-type': 'application/json; charset=UTF-8',
         },
-      })
-        .then((response) => response.json()).catch((e) => console.log(e))
-        .then(window.alert("Formulario rellenado correctamente!"))
+    })
+    .then(response => {
+        if (response.ok) {
+            window.alert("Formulario enviado correctamente!");
+            return response.json();
+        }
+        throw new Error('Error');
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch((e) => console.log(e))
 }

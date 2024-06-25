@@ -89,18 +89,26 @@ else{
 }
 })
 
-const newslApi = (nameInput,emailInput) =>{
-    
-    fetch('url', {
-        method: 'POST',
-        body: JSON.stringify({
+const newslApi = (nameInput, emailInput) => {
+  fetch('url', {
+      method: 'POST',
+      body: JSON.stringify({
           name: nameInput,
-          email: emailInput  
-        }),
-        headers: {
+          email: emailInput,
+      }),
+      headers: {
           'Content-type': 'application/json; charset=UTF-8',
-        },
-      })
-        .then((response) => response.json()).catch((e) => console.log(e))
-        .then(window.alert("Gracias por subscribirte a nuestra newsletter"))
+      },
+  })
+  .then(response => {
+      if (response.ok) {
+          window.alert("Te has suscrito a la newsletter!");
+          return response.json();
+      }
+      throw new Error('Error');
+  })
+  .then(data => {
+      console.log(data);
+  })
+  .catch((e) => console.log(e))
 }
