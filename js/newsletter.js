@@ -9,7 +9,7 @@ const expresiones = {
   email: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
 }
 
-if(localStorage.getItem('popup') === null){
+if(sessionStorage.getItem('popup') === null){
     setTimeout(() =>{
         newsl.style.display = 'block';
     }, 5000);
@@ -18,7 +18,7 @@ if(localStorage.getItem('popup') === null){
 
 const cerrar = () =>{
   newsl.style.display = 'none';
-  localStorage.setItem('popup', true);
+  sessionStorage.setItem('popup', true);
 }
 
 // botón cerrar
