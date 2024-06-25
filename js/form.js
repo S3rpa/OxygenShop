@@ -1,5 +1,6 @@
+document.addEventListener('DOMContentLoaded', () => {
 const formulario = document.getElementById('form');
-const url = 'https://jsonplaceholder.typicode.com/posts'
+const url = 'https://jsonplaceholder.typicode.com/posts';
 
 const expresiones = {
     name: /^[A-Za-z]{2,100}$/,
@@ -8,7 +9,7 @@ const expresiones = {
     document.querySelector('.contact__form__container--error--name').style.display = 'none';
     document.querySelector('.contact__form__container--error--email').style.display = 'none';
 
-formulario.addEventListener('submit', (event) => {
+formulario.addEventListener('submit',(event) => {
     event.preventDefault();
 
     const nameInput = event.target.name;
@@ -69,7 +70,7 @@ formulario.addEventListener('submit', (event) => {
 
 
 const formApi = (nameInput, emailInput) => {
-    fetch('url', {
+    fetch(url, {
         method: 'POST',
         body: JSON.stringify({
             name: nameInput,
@@ -85,10 +86,15 @@ const formApi = (nameInput, emailInput) => {
             window.alert("Formulario enviado correctamente!");
             return response.json();
         }
-        throw new Error('Error');
+        throw new Error(`HTTP error! status: ${response.status}`);
     })
     .then(data => {
         console.log(data);
     })
-    .catch((e) => console.log(e))
+    .catch((e) => {
+        console.log(e);
+        window.alert("Error al enviar el formulario: " + e.message);
+    });
 }
+});
+
