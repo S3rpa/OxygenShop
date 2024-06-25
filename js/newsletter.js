@@ -1,4 +1,5 @@
-const url = 'https://jsonplaceholder.typicode.com/posts'
+document.addEventListener('DOMContentLoaded', () => {
+const url = 'https://jsonplaceholder.typicode.com/posts';
 
 const newsl = document.getElementById('popup');
 const close = document.getElementById('close');
@@ -71,7 +72,7 @@ else{
 
 if (validName === true && validEmail == true){
   
-  newslApi(nameInput,emailInput); 
+  newslApi(nameInput.value,emailInput.value); 
   
   nameInput.value = '';
   emailInput.value = '';
@@ -89,12 +90,12 @@ else{
 }
 })
 
-const newslApi = (nameInput, emailInput) => {
-  fetch('url', {
+const newslApi = (nameForm, emailForm) => {
+  fetch(url, {
       method: 'POST',
       body: JSON.stringify({
-          name: nameInput,
-          email: emailInput,
+          name: nameForm,
+          email: emailForm,
       }),
       headers: {
           'Content-type': 'application/json; charset=UTF-8',
@@ -112,3 +113,4 @@ const newslApi = (nameInput, emailInput) => {
   })
   .catch((e) => console.log(e))
 }
+});

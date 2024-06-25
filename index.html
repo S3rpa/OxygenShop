@@ -6,6 +6,14 @@
     <title>OXYGEN Shop</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src='js/newsletter.js' defer></script>
+    <script src='js/menu.js' defer></script>
+    <script src='js/scroller.js' defer></script>
+    <script src='js/bttntop.js' defer></script>
+    <script src='js/currencies.js' defer></script>
+    <script src='js/form.js' defer></script> 
+    <script src='js/slider.js' defer></script> 
 </head>
 <body>
     <main>
@@ -13,15 +21,13 @@
             <div class="popup__newslform">
                 <button class="popup__newslform--close" id="close">X</button>
                 <h2>Subscribe our newsletter!</h2>
-                <form method="POST" id="newslform">
+                <form id="newslform" method="POST">
                     <input type="text" name="nameNw" id="nameNw" placeholder="Nombre">
                     <input type="text" name="emailNw" id="emailNw" placeholder="Email">
                     <input type="submit" value="Subscribe">
                 </form>
             </div>
         </div>
-
-
     <header class="header">
             <h1 class="header__logo">OXYGENShop</h1>
                 <ul class="header__list" id="menu">
@@ -140,8 +146,6 @@
         </div>
         </div>
     </section>
-    
-    
     <section class="pricing">
         <h2>Pricing</h2>
         <select id="currency-selector">
@@ -241,12 +245,11 @@
                     <span>+34 676 17 38 43</span>
                 </div>
             </div>
-            <form method="post" id="form" class="contact__form">
+            <form id="form" class="contact__form" method="POST">
                 <div class="contact__form__container">
-                    <input id ="name" type="text" name="name" placeholder="">
+                    <input id="name" type="text" name="name" placeholder="">
                     <label for="name">Name</label>
                     <p class="contact__form__container--error--name">El nombre no puede contener carácteres especiales ni espacios.</p>
-
                 </div>
                 <div class="contact__form__container">
                     <input id="email" type="text" name="email" placeholder="">
@@ -263,7 +266,6 @@
                             with regard to the processing of personal data and on the free movement of such data, and
                             repealing Directive 95/46/EC (Data Protection Directive)
                         </p>
-
                     </label>
                 </div>
                 <button type="submit">Send</button>
@@ -281,14 +283,7 @@
                 <img src="images/Twitter.png">
                 <a href="www.linkedin.com/in/sergio-barbera-solivella"><img src="images/Linkedin.png" class="linkedin"></a>
             </div>
-        </footer>
-        <script src='js/newsletter.js'></script>
-        <script src='js/menu.js'></script>
-        <script src='js/scroller.js'></script>
-        <script src='js/bttntop.js'></script>
-        <script src='js/currencies.js'></script> 
-        <script src='js/form.js'></script>  
-        <script src='js/slider.js'></script>  
+        </footer> 
 </body>
 </html>
 
